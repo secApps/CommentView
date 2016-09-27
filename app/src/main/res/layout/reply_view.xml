@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:paddingLeft="25dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/image"
+            android:layout_height="15dp"
+            android:background="@drawable/circle_background"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginLeft="2dp"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:layout_gravity="center_vertical"
+            android:text="Asker"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/body"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content"
+        android:text="this is a comment jhsgd s shdgfgf jshdgf shdgfgf skgfgf ksdfgkgf shgf"/>
+    <TextView
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:id="@+id/view_more"
+        android:layout_height="wrap_content"
+        android:text="View more 5 replies"/>
+
+
+
+</LinearLayout>
