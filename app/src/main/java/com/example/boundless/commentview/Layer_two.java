@@ -5,13 +5,13 @@ import java.util.List;
 /**
  * Created by boundless on 9/27/16.
  */
-public class ReplyWithChild {
-    public List<SubChild> subChildList;
+public class Layer_two {
+    public List<Layer_three> tagList;
     public  String name;
     public boolean isExpanded= false;
 
-    ReplyWithChild(List<SubChild> subChildList,String name){
-        this.subChildList=subChildList;
+    Layer_two(List<Layer_three> tagList, String name){
+        this.tagList = tagList;
         this.name=name;
 
     }

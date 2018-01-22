@@ -8,10 +8,10 @@ import android.widget.TextView;
 /**
  * Created by boundless on 9/27/16.
  */
-public class DefaultViewHolder extends RecyclerView.ViewHolder {
+public class ThirdLayerViewHolder extends RecyclerView.ViewHolder {
     public TextView mTitle;
     public CheckBox mCheckBox;
-    public DefaultViewHolder(View itemView) {
+    public ThirdLayerViewHolder(View itemView) {
         super(itemView);
         mTitle= (TextView) itemView.findViewById(R.id.sub);
         mCheckBox = (CheckBox) itemView.findViewById(R.id.check_box);

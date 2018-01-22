@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     RecyclerView commentList;
     LinearLayoutManager linearLayoutManager;
-    CommentListAdapter commentListAdapter;
+    TagListAdapter tagListAdapter;
     EditText search;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         commentList =(RecyclerView)findViewById(R.id.comment);
         linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         commentList.setLayoutManager(linearLayoutManager);
-        commentListAdapter = new CommentListAdapter(getSampleArrayList1());
-        commentList.setAdapter(commentListAdapter);
+        tagListAdapter = new TagListAdapter(getSampleArrayList1());
+        commentList.setAdapter(tagListAdapter);
         search.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                    commentListAdapter.search(charSequence.toString());
+                    tagListAdapter.search(charSequence.toString());
 
             }
 
@@ -45,31 +45,22 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private ArrayList<Object> getSampleArrayList() {
-        ArrayList<Object> items = new ArrayList<>();
-        items.add(new Comment("Dany Targaryen"));
-        items.add(new Reply("Rob Stark"));
-        items.add(new Reply("Rob Stark"));
-        items.add(new Comment("Jon Snow"));
-        items.add(new Comment("Jon Snow"));
-        items.add( new Reply("Rob Stark"));
-        return items;
-    }
+
     private ArrayList<Object> getSampleArrayList1(){
         ArrayList<Object> items = new ArrayList<>();
         for(int k=0;k<11;k++) {
-            ArrayList<ReplyWithChild> second_items = new ArrayList<>();
+            ArrayList<Layer_two> second_items = new ArrayList<>();
             for (int i = 0; i < 11; i++) {
 
-                ArrayList<SubChild> third_items = new ArrayList<>();
+                ArrayList<Layer_three> third_items = new ArrayList<>();
                 for (int j = 0; j < 6; j++) {
 
-                    third_items.add(new SubChild("C"+Integer.toString(j)));
+                    third_items.add(new Layer_three("C"+Integer.toString(j)));
                 }
-                second_items.add(new ReplyWithChild(third_items,"B"+Integer.toString(i)));
+                second_items.add(new Layer_two(third_items,"B"+Integer.toString(i)));
 
             }
-            items.add(new CommentWithReply(second_items,"A"+Integer.toString(k)));
+            items.add(new Layer_one(second_items,"A"+Integer.toString(k)));
         }
 
         return  items;

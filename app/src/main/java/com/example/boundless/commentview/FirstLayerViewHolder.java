@@ -8,10 +8,10 @@ import android.widget.TextView;
 /**
  * Created by boundless on 9/27/16.
  */
-public class CommentViewHolder extends RecyclerView.ViewHolder {
+public class FirstLayerViewHolder extends RecyclerView.ViewHolder {
     TextView body;
     ImageView expand;
-    public CommentViewHolder(View itemView) {
+    public FirstLayerViewHolder(View itemView) {
         super(itemView);
         body=(TextView)itemView.findViewById(R.id.body);
         expand=(ImageView)itemView.findViewById(R.id.expand);
